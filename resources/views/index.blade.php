@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{{ mix('js/app.js') }}" defer></script>
-
-    <title>Document</title>
-</head>
-
+@extends('master')
+@section('body')
 <body>
     <div id="app">
         {{-- <single-character :character="{{ json_encode($character) }}">
@@ -45,4 +36,4 @@
 
 </script>
 
-</html>
+@endsection

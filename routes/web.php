@@ -15,12 +15,12 @@ use App\Http\Controllers\CharController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', [CharacterController::class, "getCharacters"]);
 
 Route::get('/character', [CharacterController::class, "showSingleCharacter"]);
 
-Route::resource('chars', CharController::class);
+Route::get('search', function () {
+    return view('search');
+});
+
+Route::any('/results', [CharacterController::class, "search"]);

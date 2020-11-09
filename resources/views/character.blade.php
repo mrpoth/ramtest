@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
+@extends('master')
+@section('title')
+@section('body')
 <body>
-    <div>
-        <h2>Name: {{ $character['name'] }}</h2>
-        <h3>Episodes:</h3>
-            @foreach ($episodes as $episode)
-                <p>{{ $episode }}</p>
-            @endforeach
+    <div class="flex-container">
+
+            <div class="flex-box">
+                <a href="/character/?id={{ $character['id'] }}">
+                    <img class="char-image" src="{{ $character['image'] }}" />
+                    <h3>Name: {{ $character['name'] }}</h3>
+                </a>
+                <h3>Species: {{ $character['species'] }}</h3>
+                <h3>Origin: {{ $character['origin']['name'] }}</h3>
+                <h4>Episodes:</h4>
+                <ul class="episode-list">
+                    @foreach ($episodes as $episode)
+                        <li>{{ $episode['name'] }} ({{$episode['id']}})</li>
+                    @endforeach
+                </ul>
+            </div>
     </div>
 </body>
-
-</html>
+@endsection
