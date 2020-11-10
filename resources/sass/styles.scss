@@ -1,10 +1,14 @@
 // // Fonts
 // @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-@import 'variables';
+@import "variables";
 
 // // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
+
+html {
+    background: #b7e4f9ff;
+}
 
 .flex-container {
     display: flex;
@@ -14,8 +18,6 @@
 }
 
 .flex-box {
-    margin: 10px;
-    border: 1px solid black;
     width: 400px;
     max-width: 100%;
     text-align: center;
@@ -28,19 +30,54 @@
     height: auto;
 }
 
-.pagination a {
-    display: block;
-    margin: auto 10px;
-    font-size: 23px;
-    background-color: #e7e865;
-    padding: 5px;
-    color: #8dc9c1;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    a {
+        display: block;
+        margin: auto 10px;
+        font-size: 23px;
+        background-color: #e7e865;
+        padding: 5px;
+        color: #8dc9c1;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+}
+
+.episode-list {
+    column-count: 2;
+    list-style: none;
+
+    li {
+        margin: 5px;
+    }
+}
+
+ul.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    a {
+        margin: auto 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+.form-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+
+    label {
+        margin: 3px;
+    }
 }

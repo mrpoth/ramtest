@@ -10,4 +10,10 @@ npm install && composer install
 npm run dev
 php artisan serve
 ```
+*Note: if you get a 500 server error, you may need to run these additional 
+commands before php artisan serve:*
 
+```
+cp .env.example .env
+php artisan key:generate
+```
